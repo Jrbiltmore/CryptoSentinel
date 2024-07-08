@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  app:
+    image: node:14
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app
+    command: sh -c "npm install && npm run start"
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+
+  blockchain:
+    image: trufflesuite/ganache-cli
+    ports:
+      - "8545:8545"
+    command: ganache-cli -p 8545 -i 1337 -m "candy maple cake sugar pudding cream honey rich smooth crumble sweet treat"
+
+  database:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: us_military_crypto
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
