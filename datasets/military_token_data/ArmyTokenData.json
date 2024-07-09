@@ -1,0 +1,69 @@
+{
+    "tokenDetails": {
+        "name": "ArmyToken",
+        "symbol": "ART",
+        "initialSupply": 1000000000,
+        "decimals": 18
+    },
+    "distribution": {
+        "teamAllocation": 15,
+        "developmentFund": 25,
+        "marketingFund": 10,
+        "airdrop": 5,
+        "publicSale": 45
+    },
+    "vestingSchedule": {
+        "teamAllocation": {
+            "cliffPeriodMonths": 12,
+            "vestingDurationMonths": 48
+        },
+        "developmentFund": {
+            "cliffPeriodMonths": 6,
+            "vestingDurationMonths": 36
+        },
+        "marketingFund": {
+            "cliffPeriodMonths": 3,
+            "vestingDurationMonths": 24
+        }
+    },
+    "useCases": [
+        {
+            "description": "Rewarding Army personnel for outstanding service.",
+            "allocation": 25
+        },
+        {
+            "description": "Funding technological innovations and R&D.",
+            "allocation": 30
+        },
+        {
+            "description": "Providing benefits and support to veterans.",
+            "allocation": 20
+        },
+        {
+            "description": "Building and maintaining infrastructure.",
+            "allocation": 15
+        },
+        {
+            "description": "Community engagement and welfare programs.",
+            "allocation": 10
+        }
+    ],
+    "governance": {
+        "votingMechanism": "stake-based",
+        "quorumPercentage": 50,
+        "proposalThreshold": 1000000,
+        "votingPeriodDays": 7
+    },
+    "tokenomics": {
+        "inflationRate": 1.5,
+        "deflationMechanisms": [
+            "buyback-and-burn",
+            "transaction fees"
+        ]
+    },
+    "keyMetrics": {
+        "marketCap": 6000000000,
+        "circulatingSupply": 850000000,
+        "totalSupply": 1000000000
+    }
+}
