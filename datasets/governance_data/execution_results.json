@@ -1,0 +1,52 @@
+{
+    "executionResults": [
+        {
+            "proposalId": 1,
+            "title": "Increase Staking Rewards",
+            "description": "Proposal to increase the staking rewards by 2% for all users.",
+            "status": "approved",
+            "votesFor": 1200,
+            "votesAgainst": 300,
+            "votesAbstain": 50,
+            "executionTime": "2024-07-01T10:00:00Z",
+            "executedBy": "0x1234567890abcdef1234567890abcdef12345678",
+            "executionTxHash": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef"
+        },
+        {
+            "proposalId": 2,
+            "title": "Reduce Transaction Fees",
+            "description": "Proposal to reduce the transaction fees by 0.5% for all transactions.",
+            "status": "rejected",
+            "votesFor": 800,
+            "votesAgainst": 900,
+            "votesAbstain": 100,
+            "executionTime": null,
+            "executedBy": null,
+            "executionTxHash": null
+        },
+        {
+            "proposalId": 3,
+            "title": "Add New Cryptocurrency Support",
+            "description": "Proposal to add support for a new cryptocurrency in the wallet.",
+            "status": "approved",
+            "votesFor": 1500,
+            "votesAgainst": 200,
+            "votesAbstain": 75,
+            "executionTime": "2024-07-03T14:00:00Z",
+            "executedBy": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+            "executionTxHash": "0x1234567890abcdef1234567890abcdef12345678"
+        },
+        {
+            "proposalId": 4,
+            "title": "Implement New Security Features",
+            "description": "Proposal to implement new security features to enhance user safety.",
+            "status": "approved",
+            "votesFor": 1800,
+            "votesAgainst": 150,
+            "votesAbstain": 50,
+            "executionTime": "2024-07-05T09:00:00Z",
+            "executedBy": "0x9876543210abcdef9876543210abcdef98765432",
+            "executionTxHash": "0xfedcbafedcbafedcbafedcbafedcbafedcbafedc"
+        }
+    ]
+}
