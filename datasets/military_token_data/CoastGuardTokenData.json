@@ -1,0 +1,44 @@
+{
+    "blockchainData": {
+        "contractAddress": "0xabcdef1234567890abcdef1234567890abcdef12",
+        "totalSupply": 1000000000,
+        "circulatingSupply": 800000000,
+        "holders": [
+            {
+                "address": "0x1234567890abcdef1234567890abcdef12345678",
+                "balance": 50000000
+            },
+            {
+                "address": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+                "balance": 45000000
+            },
+            {
+                "address": "0xabcdef1234567890abcdef1234567890abcdef12",
+                "balance": 40000000
+            }
+        ],
+        "transactions": [
+            {
+                "txId": "0xabcdef1234567890abcdef1234567890abcdef12",
+                "from": "0x1234567890abcdef1234567890abcdef12345678",
+                "to": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+                "amount": 1000,
+                "timestamp": "2024-06-30T08:00:00Z"
+            },
+            {
+                "txId": "0x1234567890abcdef1234567890abcdefabcdef12",
+                "from": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+                "to": "0x1234567890abcdef1234567890abcdef12345678",
+                "amount": 500,
+                "timestamp": "2024-06-30T09:00:00Z"
+            },
+            {
+                "txId": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+                "from": "0x1234567890abcdef1234567890abcdefabcdef12",
+                "to": "0xabcdef1234567890abcdef1234567890abcdef12",
+                "amount": 750,
+                "timestamp": "2024-07-01T10:00:00Z"
+            }
+        ]
+    }
+}
