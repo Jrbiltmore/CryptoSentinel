@@ -1,0 +1,54 @@
+{
+    "testData": [
+        {
+            "id": 1,
+            "text": "Bitcoin is expected to rise significantly due to increasing institutional interest.",
+            "label": "positive"
+        },
+        {
+            "id": 2,
+            "text": "Ethereum has been facing scalability issues which might affect its price.",
+            "label": "negative"
+        },
+        {
+            "id": 3,
+            "text": "Litecoin's new update promises faster transactions and lower fees.",
+            "label": "positive"
+        },
+        {
+            "id": 4,
+            "text": "There are rumors about regulatory crackdowns on cryptocurrency exchanges.",
+            "label": "negative"
+        },
+        {
+            "id": 5,
+            "text": "The market is showing signs of recovery after the recent slump.",
+            "label": "positive"
+        },
+        {
+            "id": 6,
+            "text": "Several altcoins are experiencing a downturn due to lack of investor confidence.",
+            "label": "negative"
+        },
+        {
+            "id": 7,
+            "text": "Bitcoin's volatility remains a concern for many investors.",
+            "label": "neutral"
+        },
+        {
+            "id": 8,
+            "text": "The integration of blockchain technology in various sectors is driving its adoption.",
+            "label": "positive"
+        },
+        {
+            "id": 9,
+            "text": "There is uncertainty in the market due to potential changes in regulation.",
+            "label": "neutral"
+        },
+        {
+            "id": 10,
+            "text": "Cryptocurrency mining has become less profitable with the recent drop in prices.",
+            "label": "negative"
+        }
+    ]
+}
