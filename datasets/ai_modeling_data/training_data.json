@@ -1,0 +1,104 @@
+{
+    "trainingData": [
+        {
+            "id": 1,
+            "text": "The adoption of Bitcoin by major companies is accelerating.",
+            "label": "positive"
+        },
+        {
+            "id": 2,
+            "text": "Recent regulatory news has caused uncertainty in the market.",
+            "label": "negative"
+        },
+        {
+            "id": 3,
+            "text": "Ethereum's smart contract functionality is being widely adopted.",
+            "label": "positive"
+        },
+        {
+            "id": 4,
+            "text": "Many cryptocurrencies experienced a significant drop in value.",
+            "label": "negative"
+        },
+        {
+            "id": 5,
+            "text": "The overall sentiment in the crypto market is optimistic.",
+            "label": "positive"
+        },
+        {
+            "id": 6,
+            "text": "There are growing concerns about the environmental impact of Bitcoin mining.",
+            "label": "negative"
+        },
+        {
+            "id": 7,
+            "text": "Litecoin is seeing increased usage in everyday transactions.",
+            "label": "positive"
+        },
+        {
+            "id": 8,
+            "text": "A recent security breach has affected several cryptocurrency exchanges.",
+            "label": "negative"
+        },
+        {
+            "id": 9,
+            "text": "The market remains volatile with frequent price swings.",
+            "label": "neutral"
+        },
+        {
+            "id": 10,
+            "text": "New technological advancements are being integrated into blockchain platforms.",
+            "label": "positive"
+        },
+        {
+            "id": 11,
+            "text": "Investors are cautious due to potential regulatory changes.",
+            "label": "neutral"
+        },
+        {
+            "id": 12,
+            "text": "The introduction of decentralized finance (DeFi) platforms is revolutionizing the industry.",
+            "label": "positive"
+        },
+        {
+            "id": 13,
+            "text": "The recent market downturn has led to significant losses for investors.",
+            "label": "negative"
+        },
+        {
+            "id": 14,
+            "text": "Cryptocurrency adoption is increasing among small businesses.",
+            "label": "positive"
+        },
+        {
+            "id": 15,
+            "text": "There is a lot of speculation surrounding the future of various altcoins.",
+            "label": "neutral"
+        },
+        {
+            "id": 16,
+            "text": "Bitcoin's price surge has caught the attention of mainstream media.",
+            "label": "positive"
+        },
+        {
+            "id": 17,
+            "text": "Market analysts are divided on the future performance of cryptocurrencies.",
+            "label": "neutral"
+        },
+        {
+            "id": 18,
+            "text": "The development of new blockchain protocols promises greater efficiency.",
+            "label": "positive"
+        },
+        {
+            "id": 19,
+            "text": "There is ongoing debate about the regulatory framework for cryptocurrencies.",
+            "label": "neutral"
+        },
+        {
+            "id": 20,
+            "text": "A major hack has resulted in the loss of millions in cryptocurrency.",
+            "label": "negative"
+        }
+    ]
+}
