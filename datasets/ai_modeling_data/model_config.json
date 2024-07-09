@@ -1,0 +1,76 @@
+{
+    "modelName": "CryptoSentimentAnalyzer",
+    "version": "1.0",
+    "description": "A model to analyze sentiment of cryptocurrency market data.",
+    "trainingData": {
+        "source": "CryptoSentry/datasets/ai_modeling_data/training_data.csv",
+        "preprocessing": {
+            "textCleaning": true,
+            "normalization": true,
+            "featureExtraction": {
+                "method": "TF-IDF",
+                "maxFeatures": 10000
+            }
+        },
+        "split": {
+            "trainSize": 0.8,
+            "validationSize": 0.1,
+            "testSize": 0.1
+        }
+    },
+    "modelArchitecture": {
+        "type": "LSTM",
+        "layers": [
+            {
+                "type": "embedding",
+                "inputDim": 10000,
+                "outputDim": 128
+            },
+            {
+                "type": "lstm",
+                "units": 128,
+                "returnSequences": true
+            },
+            {
+                "type": "lstm",
+                "units": 64
+            },
+            {
+                "type": "dense",
+                "units": 1,
+                "activation": "sigmoid"
+            }
+        ],
+        "dropoutRate": 0.5,
+        "lossFunction": "binary_crossentropy",
+        "optimizer": "adam",
+        "metrics": ["accuracy"]
+    },
+    "trainingParameters": {
+        "batchSize": 32,
+        "epochs": 50,
+        "validationSplit": 0.1,
+        "callbacks": {
+            "earlyStopping": {
+                "monitor": "val_loss",
+                "patience": 5
+            },
+            "modelCheckpoint": {
+                "filepath": "CryptoSentry/models/checkpoints/model-{epoch:02d}-{val_loss:.2f}.h5",
+                "saveBestOnly": true
+            }
+        }
+    },
+    "evaluation": {
+        "metrics": ["accuracy", "precision", "recall", "f1Score"],
+        "reportFile": "CryptoSentry/datasets/ai_modeling_data/evaluation_report.json"
+    },
+    "deployment": {
+        "exportFormat": "SavedModel",
+        "exportPath": "CryptoSentry/models/deployed_model",
+        "inferenceConfig": {
+            "inputFormat": "JSON",
+            "outputFormat": "JSON"
+        }
+    }
+}
