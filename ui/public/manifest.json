@@ -1,0 +1,42 @@
+{
+    "short_name": "CryptoSentry",
+    "name": "CryptoSentry - Secure Cryptocurrency Management",
+    "description": "CryptoSentry provides secure and efficient cryptocurrency management solutions, including automated trading, real-time monitoring, and advanced security features.",
+    "icons": [
+        {
+            "src": "images/icon-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "images/icon-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/index.html",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#4CAF50",
+    "shortcuts": [
+        {
+            "name": "Dashboard",
+            "short_name": "Dashboard",
+            "description": "Open the CryptoSentry dashboard",
+            "url": "/dashboard.html",
+            "icons": [{ "src": "images/shortcut-icon.png", "sizes": "192x192" }]
+        },
+        {
+            "name": "Transactions",
+            "short_name": "Transactions",
+            "description": "View transaction history",
+            "url": "/transactions.html",
+            "icons": [{ "src": "images/shortcut-icon.png", "sizes": "192x192" }]
+        }
+    ],
+    "permissions": [
+        "internet",
+        "notifications"
+    ]
+}
