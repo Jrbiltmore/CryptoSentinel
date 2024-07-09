@@ -1,0 +1,70 @@
+{
+    "votingData": [
+        {
+            "proposalId": 1,
+            "voterAddress": "0x1234567890abcdef1234567890abcdef12345678",
+            "vote": "for",
+            "timestamp": "2024-06-30T08:00:00Z"
+        },
+        {
+            "proposalId": 1,
+            "voterAddress": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+            "vote": "for",
+            "timestamp": "2024-06-30T08:05:00Z"
+        },
+        {
+            "proposalId": 1,
+            "voterAddress": "0xabcdef1234567890abcdef1234567890abcdef12",
+            "vote": "against",
+            "timestamp": "2024-06-30T08:10:00Z"
+        },
+        {
+            "proposalId": 2,
+            "voterAddress": "0x9876543210abcdef9876543210abcdef98765432",
+            "vote": "against",
+            "timestamp": "2024-06-30T09:00:00Z"
+        },
+        {
+            "proposalId": 2,
+            "voterAddress": "0xfedcbafedcbafedcbafedcbafedcbafedcbafedc",
+            "vote": "for",
+            "timestamp": "2024-06-30T09:05:00Z"
+        },
+        {
+            "proposalId": 3,
+            "voterAddress": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+            "vote": "for",
+            "timestamp": "2024-07-02T12:00:00Z"
+        },
+        {
+            "proposalId": 3,
+            "voterAddress": "0x1234567890abcdef1234567890abcdef12345678",
+            "vote": "for",
+            "timestamp": "2024-07-02T12:10:00Z"
+        },
+        {
+            "proposalId": 3,
+            "voterAddress": "0xfedcbafedcbafedcbafedcbafedcbafedcbafedc",
+            "vote": "against",
+            "timestamp": "2024-07-02T12:20:00Z"
+        },
+        {
+            "proposalId": 4,
+            "voterAddress": "0x9876543210abcdef9876543210abcdef98765432",
+            "vote": "for",
+            "timestamp": "2024-07-04T14:00:00Z"
+        },
+        {
+            "proposalId": 4,
+            "voterAddress": "0xabcdef1234567890abcdef1234567890abcdef12",
+            "vote": "for",
+            "timestamp": "2024-07-04T14:10:00Z"
+        },
+        {
+            "proposalId": 4,
+            "voterAddress": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+            "vote": "abstain",
+            "timestamp": "2024-07-04T14:15:00Z"
+        }
+    ]
+}
