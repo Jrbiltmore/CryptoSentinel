@@ -1,0 +1,69 @@
+{
+    "tokenDetails": {
+        "name": "AirForceToken",
+        "symbol": "AFT",
+        "initialSupply": 1000000000,
+        "decimals": 18
+    },
+    "distribution": {
+        "teamAllocation": 10,
+        "developmentFund": 20,
+        "marketingFund": 10,
+        "airdrop": 5,
+        "publicSale": 55
+    },
+    "vestingSchedule": {
+        "teamAllocation": {
+            "cliffPeriodMonths": 12,
+            "vestingDurationMonths": 48
+        },
+        "developmentFund": {
+            "cliffPeriodMonths": 6,
+            "vestingDurationMonths": 36
+        },
+        "marketingFund": {
+            "cliffPeriodMonths": 3,
+            "vestingDurationMonths": 24
+        }
+    },
+    "useCases": [
+        {
+            "description": "Rewarding Air Force personnel for exemplary service.",
+            "allocation": 20
+        },
+        {
+            "description": "Funding technological advancements and R&D.",
+            "allocation": 30
+        },
+        {
+            "description": "Providing benefits and support to veterans.",
+            "allocation": 25
+        },
+        {
+            "description": "Building infrastructure and facilities.",
+            "allocation": 15
+        },
+        {
+            "description": "Community engagement and welfare programs.",
+            "allocation": 10
+        }
+    ],
+    "governance": {
+        "votingMechanism": "stake-based",
+        "quorumPercentage": 50,
+        "proposalThreshold": 1000000,
+        "votingPeriodDays": 7
+    },
+    "tokenomics": {
+        "inflationRate": 2,
+        "deflationMechanisms": [
+            "buyback-and-burn",
+            "transaction fees"
+        ]
+    },
+    "keyMetrics": {
+        "marketCap": 5000000000,
+        "circulatingSupply": 800000000,
+        "totalSupply": 1000000000
+    }
+}
