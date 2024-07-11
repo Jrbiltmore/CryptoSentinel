@@ -1,0 +1,176 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "Blockchain Monitoring Dashboard",
+    "tags": ["blockchain", "monitoring"],
+    "timezone": "browser",
+    "schemaVersion": 27,
+    "version": 1,
+    "refresh": "5s",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Transaction Rate",
+        "gridPos": {
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 8
+        },
+        "id": 1,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "rate(blockchain_transactions_total[5m])",
+            "legendFormat": "Tx Rate",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time",
+          "show": true
+        },
+        "yaxis": {
+          "show": true,
+          "label": "Transactions per second"
+        }
+      },
+      {
+        "type": "graph",
+        "title": "Block Time",
+        "gridPos": {
+          "x": 12,
+          "y": 0,
+          "w": 12,
+          "h": 8
+        },
+        "id": 2,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "rate(blockchain_block_time_seconds[5m])",
+            "legendFormat": "Block Time",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time",
+          "show": true
+        },
+        "yaxis": {
+          "show": true,
+          "label": "Seconds"
+        }
+      },
+      {
+        "type": "table",
+        "title": "Top Addresses by Balance",
+        "gridPos": {
+          "x": 0,
+          "y": 8,
+          "w": 12,
+          "h": 8
+        },
+        "id": 3,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "blockchain_top_addresses_balance",
+            "legendFormat": "{{address}}",
+            "refId": "A"
+          }
+        ],
+        "columns": [
+          {"text": "Address", "value": "address"},
+          {"text": "Balance", "value": "balance"}
+        ],
+        "pageSize": 10,
+        "scroll": true
+      },
+      {
+        "type": "table",
+        "title": "Latest Transactions",
+        "gridPos": {
+          "x": 12,
+          "y": 8,
+          "w": 12,
+          "h": 8
+        },
+        "id": 4,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "blockchain_latest_transactions",
+            "legendFormat": "{{tx_hash}}",
+            "refId": "A"
+          }
+        ],
+        "columns": [
+          {"text": "Tx Hash", "value": "tx_hash"},
+          {"text": "From", "value": "from"},
+          {"text": "To", "value": "to"},
+          {"text": "Amount", "value": "amount"},
+          {"text": "Timestamp", "value": "timestamp"}
+        ],
+        "pageSize": 10,
+        "scroll": true
+      },
+      {
+        "type": "graph",
+        "title": "Gas Used",
+        "gridPos": {
+          "x": 0,
+          "y": 16,
+          "w": 12,
+          "h": 8
+        },
+        "id": 5,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "rate(blockchain_gas_used[5m])",
+            "legendFormat": "Gas Used",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time",
+          "show": true
+        },
+        "yaxis": {
+          "show": true,
+          "label": "Gas"
+        }
+      },
+      {
+        "type": "graph",
+        "title": "Block Size",
+        "gridPos": {
+          "x": 12,
+          "y": 16,
+          "w": 12,
+          "h": 8
+        },
+        "id": 6,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "rate(blockchain_block_size_bytes[5m])",
+            "legendFormat": "Block Size",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time",
+          "show": true
+        },
+        "yaxis": {
+          "show": true,
+          "label": "Bytes"
+        }
+      }
+    ]
+  },
+  "inputs": [],
+  "overwrite": false
+}
