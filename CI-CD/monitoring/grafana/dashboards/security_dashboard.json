@@ -1,0 +1,173 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "CryptoSentry Security Dashboard",
+    "tags": ["security", "monitoring"],
+    "timezone": "browser",
+    "schemaVersion": 27,
+    "version": 1,
+    "refresh": "5s",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Failed Login Attempts",
+        "gridPos": {
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 8
+        },
+        "id": 1,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "rate(failed_login_attempts_total[5m])",
+            "legendFormat": "Failed Logins",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time",
+          "show": true
+        },
+        "yaxis": {
+          "show": true,
+          "label": "Failed Logins per second"
+        }
+      },
+      {
+        "type": "graph",
+        "title": "Successful Login Attempts",
+        "gridPos": {
+          "x": 12,
+          "y": 0,
+          "w": 12,
+          "h": 8
+        },
+        "id": 2,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "rate(successful_login_attempts_total[5m])",
+            "legendFormat": "Successful Logins",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time",
+          "show": true
+        },
+        "yaxis": {
+          "show": true,
+          "label": "Successful Logins per second"
+        }
+      },
+      {
+        "type": "table",
+        "title": "Top IPs by Failed Logins",
+        "gridPos": {
+          "x": 0,
+          "y": 8,
+          "w": 12,
+          "h": 8
+        },
+        "id": 3,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "topk(10, sum(rate(failed_login_attempts_total[5m])) by (ip))",
+            "legendFormat": "{{ip}}",
+            "refId": "A"
+          }
+        ],
+        "columns": [
+          {"text": "IP Address", "value": "ip"},
+          {"text": "Failed Login Attempts", "value": "failed_logins"}
+        ],
+        "pageSize": 10,
+        "scroll": true
+      },
+      {
+        "type": "table",
+        "title": "Top IPs by Successful Logins",
+        "gridPos": {
+          "x": 12,
+          "y": 8,
+          "w": 12,
+          "h": 8
+        },
+        "id": 4,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "topk(10, sum(rate(successful_login_attempts_total[5m])) by (ip))",
+            "legendFormat": "{{ip}}",
+            "refId": "A"
+          }
+        ],
+        "columns": [
+          {"text": "IP Address", "value": "ip"},
+          {"text": "Successful Login Attempts", "value": "successful_logins"}
+        ],
+        "pageSize": 10,
+        "scroll": true
+      },
+      {
+        "type": "graph",
+        "title": "Firewall Blocked Requests",
+        "gridPos": {
+          "x": 0,
+          "y": 16,
+          "w": 12,
+          "h": 8
+        },
+        "id": 5,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "rate(firewall_blocked_requests_total[5m])",
+            "legendFormat": "Blocked Requests",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time",
+          "show": true
+        },
+        "yaxis": {
+          "show": true,
+          "label": "Blocked Requests per second"
+        }
+      },
+      {
+        "type": "graph",
+        "title": "Detected Threats",
+        "gridPos": {
+          "x": 12,
+          "y": 16,
+          "w": 12,
+          "h": 8
+        },
+        "id": 6,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "rate(detected_threats_total[5m])",
+            "legendFormat": "Detected Threats",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time",
+          "show": true
+        },
+        "yaxis": {
+          "show": true,
+          "label": "Threats per second"
+        }
+      }
+    ]
+  },
+  "inputs": [],
+  "overwrite": false
+}
