@@ -1,0 +1,153 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "CryptoSentry Performance Dashboard",
+    "tags": ["performance", "monitoring"],
+    "timezone": "browser",
+    "schemaVersion": 27,
+    "version": 1,
+    "refresh": "5s",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "CPU Usage",
+        "gridPos": {
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 8
+        },
+        "id": 1,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "avg(rate(node_cpu_seconds_total[5m])) by (instance)",
+            "legendFormat": "{{instance}}",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time",
+          "show": true
+        },
+        "yaxis": {
+          "show": true,
+          "label": "CPU Usage (%)"
+        }
+      },
+      {
+        "type": "graph",
+        "title": "Memory Usage",
+        "gridPos": {
+          "x": 12,
+          "y": 0,
+          "w": 12,
+          "h": 8
+        },
+        "id": 2,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "avg(node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100) by (instance)",
+            "legendFormat": "{{instance}}",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time",
+          "show": true
+        },
+        "yaxis": {
+          "show": true,
+          "label": "Memory Usage (%)"
+        }
+      },
+      {
+        "type": "graph",
+        "title": "Disk I/O",
+        "gridPos": {
+          "x": 0,
+          "y": 8,
+          "w": 12,
+          "h": 8
+        },
+        "id": 3,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "rate(node_disk_io_time_seconds_total[5m])",
+            "legendFormat": "{{device}}",
+            "refId": "A"
+          }
+        ],
+        "xaxis": {
+          "mode": "time",
+          "show": true
+        },
+        "yaxis": {
+          "show": true,
+          "label": "Disk I/O (seconds)"
+        }
+      },
+      {
+        "type": "graph",
+        "title": "Network Traffic",
+        "gridPos": {
+          "x": 12,
+          "y": 8,
+          "w": 12,
+          "h": 8
+        },
+        "id": 4,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "rate(node_network_receive_bytes_total[5m])",
+            "legendFormat": "Receive - {{instance}}",
+            "refId": "A"
+          },
+          {
+            "expr": "rate(node_network_transmit_bytes_total[5m])",
+            "legendFormat": "Transmit - {{instance}}",
+            "refId": "B"
+          }
+        ],
+        "xaxis": {
+          "mode": "time",
+          "show": true
+        },
+        "yaxis": {
+          "show": true,
+          "label": "Network Traffic (bytes/sec)"
+        }
+      },
+      {
+        "type": "table",
+        "title": "Top Processes by CPU Usage",
+        "gridPos": {
+          "x": 0,
+          "y": 16,
+          "w": 24,
+          "h": 8
+        },
+        "id": 5,
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "topk(10, rate(node_cpu_seconds_total[5m]))",
+            "legendFormat": "{{process}}",
+            "refId": "A"
+          }
+        ],
+        "columns": [
+          {"text": "Process", "value": "process"},
+          {"text": "CPU Usage", "value": "cpu_usage"}
+        ],
+        "pageSize": 10,
+        "scroll": true
+      }
+    ]
+  },
+  "inputs": [],
+  "overwrite": false
+}
