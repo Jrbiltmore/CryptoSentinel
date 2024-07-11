@@ -1,0 +1,55 @@
+apiVersion: 1
+
+datasources:
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    isDefault: true
+    editable: true
+    jsonData:
+      timeInterval: "5s"
+      tlsSkipVerify: true
+
+  - name: Loki
+    type: loki
+    access: proxy
+    url: http://loki:3100
+    editable: true
+    jsonData:
+      maxLines: 1000
+
+  - name: Elasticsearch
+    type: elasticsearch
+    access: proxy
+    url: http://elasticsearch:9200
+    editable: true
+    database: "logs"
+    jsonData:
+      esVersion: 7
+      timeField: "@timestamp"
+      interval: "5s"
+      logMessageField: "message"
+      logLevelField: "level"
+
+  - name: InfluxDB
+    type: influxdb
+    access: proxy
+    url: http://influxdb:8086
+    editable: true
+    database: "metrics"
+    user: "admin"
+    secureJsonData:
+      password: "admin_password"
+    jsonData:
+      httpMode: "POST"
+      keepCookies: []
+      tlsSkipVerify: true
+
+  - name: MySQL
+    type: mysql
+    access: proxy
+    url: mysql://username:password@tcp(mysql:3306)/database
+    editable: true
+    jsonData:
+      tlsSkipVerify: true
